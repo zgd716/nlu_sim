@@ -1,0 +1,6 @@
+model_checkpoint_path: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-20000"
+all_model_checkpoint_paths: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-1000"
+all_model_checkpoint_paths: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-7000"
+all_model_checkpoint_paths: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-11000"
+all_model_checkpoint_paths: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-14000"
+all_model_checkpoint_paths: "/rsdata/rsapp/src/deep-siamese-text-similarity/runs/1526866723/checkpoints/model-20000"

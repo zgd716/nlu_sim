@@ -55,10 +55,10 @@ def predict_siamese(inpath):
     with graph:
         print("1.load vocabulary...")
         vocabulary_word2index, vocabulary_index2label= load_vocabulary(FLAGS.traning_data_path,FLAGS.vocab_size,
-                                                        name_scope=name_scope,tokenize_style=tokenize_style)
-        vocab_size = len(vocabulary_word2index);print(model_name+".vocab_size:",vocab_size);num_classes=len(vocabulary_index2label);print("num_classes:",num_classes)
+                                                        name_scope='siamese',tokenize_style='word')
+        vocab_size = len(vocabulary_word2index);print(".vocab_size:",vocab_size);num_classes=len(vocabulary_index2label);print("num_classes:",num_classes)
         print("2.load data....")
-        lineno_list, X1, X2,BLUESCORE=load_test_data(inpath, vocabulary_word2index, FLAGS.sentence_len, tokenize_style=tokenize_style)
+        lineno_list, X1, X2,BLUESCORE=load_test_data(inpath, vocabulary_word2index, FLAGS.sentence_len, tokenize_style='word')
         length_data_mining_features = len(BLUESCORE[0])
         print("length_data_mining_features:",length_data_mining_features)
 
@@ -90,7 +90,7 @@ def predict_siamese(inpath):
             # Generate batches for one epoch
             # 3.feed data & training
             number_of_test_data = len(X1)
-            print(model_name + ".number_of_test_data:", number_of_test_data)
+            print(".number_of_test_data:", number_of_test_data)
             batch_size = FLAGS.batch_size
             iteration = 0
             divide_equally = (number_of_test_data % batch_size == 0)
